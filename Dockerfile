@@ -1,7 +1,7 @@
 # Rebuild the source code only when needed
 FROM node:18-alpine 
 
-RUN apk add --no-cache libc6-compat git
+RUN apk add libc6-compat git
 RUN npm i -g pnpm pm2
 WORKDIR /app
 RUN git clone https://git.timochan.cn/ttimochan/kami.git --depth 1 .
