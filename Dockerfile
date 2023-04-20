@@ -3,6 +3,7 @@ FROM node:18-alpine
 
 RUN apk add libc6-compat git && \
     npm i -g pnpm pm2
+    
 WORKDIR /app
 RUN git clone https://git.timochan.cn/ttimochan/kami.git --depth 1 .
 ENV BASE_URL=https://api.timochan.cn
