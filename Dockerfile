@@ -1,5 +1,5 @@
 # Rebuild the source code only when needed
-FROM node:18-alpine 
+FROM node:21-alpine 
 
 RUN apk add libc6-compat git && \
     npm i -g pnpm pm2
