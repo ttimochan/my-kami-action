@@ -3,8 +3,9 @@ FROM node:20-alpine AS builder
 RUN apk add --no-cache libc6-compat git
 RUN npm i -g pnpm
 WORKDIR /app
-RUN git clone https://github.com/ttimochan/kami.git && \
-    pnpm install && \
+RUN git clone https://github.com/ttimochan/kami.git 
+
+RUN pnpm install && \
     npm run build
 
 # If using npm comment out above and use below instead
