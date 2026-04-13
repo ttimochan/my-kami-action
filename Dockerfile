@@ -21,6 +21,7 @@ ENV BASE_URL=https://www.timochan.cn
 ENV BASE_URL=${BASE_URL}
 ENV NEXT_PUBLIC_API_URL=${BASE_URL}/api
 ENV NEXT_PUBLIC_GATEWAY_URL=${BASE_URL}
+ENV NEXT_PUBLIC_KAMI_LOCALES=zh,en
 RUN node -e "console.log(process.env)"
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED 1
