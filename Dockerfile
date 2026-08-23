@@ -1,13 +1,13 @@
 FROM node:24-alpine AS builder
 
 RUN apk add --no-cache libc6-compat git
-RUN npm i -g pnpm
+RUN npm i -g pnpm@10.34.5
 WORKDIR /app
 RUN git clone https://github.com/ttimochan/kami.git 
 
 RUN cd kami && \
     pnpm install && \
-    npm run build
+    pnpm build
 
 # If using npm comment out above and use below instead
 # RUN npm run build
