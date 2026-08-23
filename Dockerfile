@@ -7,7 +7,7 @@ RUN git clone https://github.com/ttimochan/kami.git
 
 RUN cd kami && \
     pnpm install && \
-    pnpm build
+    npm run build
 
 # If using npm comment out above and use below instead
 # RUN npm run build
